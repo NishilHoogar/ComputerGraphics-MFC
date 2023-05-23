@@ -1,1 +1,284 @@
+// MFCApplication1View.cpp : implementation of the CMFCApplication1View class
+//
+
+#include "pch.h"
+#include "framework.h"
+// SHARED_HANDLERS can be defined in an ATL project implementing preview, thumbnail
+// and search filter handlers and allows sharing of document code with that project.
+#ifndef SHARED_HANDLERS
+#include "MFCApplication1.h"
+#endif
+
+#include "MFCApplication1Doc.h"
+#include "MFCApplication1View.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
+
+// CMFCApplication1View
+
+IMPLEMENT_DYNCREATE(CMFCApplication1View, CView)
+
+BEGIN_MESSAGE_MAP(CMFCApplication1View, CView)
+	// Standard printing commands
+	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
+	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
+	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CMFCApplication1View::OnFilePrintPreview)
+	ON_WM_CONTEXTMENU()
+	ON_WM_RBUTTONUP()
+END_MESSAGE_MAP()
+
+// CMFCApplication1View construction/destruction
+
+CMFCApplication1View::CMFCApplication1View() noexcept
+{
+	// TODO: add construction code here
+
+}
+
+CMFCApplication1View::~CMFCApplication1View()
+{
+}
+
+BOOL CMFCApplication1View::PreCreateWindow(CREATESTRUCT& cs)
+{
+	// TODO: Modify the Window class or styles here by modifying
+	//  the CREATESTRUCT cs
+
+	return CView::PreCreateWindow(cs);
+}
+
+// CMFCApplication1View drawing
+
+void CMFCApplication1View::OnDraw(CDC* pDC)
+{
+	CPoint Pt1[4];
+	Pt1[0] = CPoint(1007, 530);
+	Pt1[1] = CPoint(1044, 499);
+	Pt1[2] = CPoint(960, 463);
+	Pt1[3] = CPoint(958, 474);
+	CBrush NewBrush1(RGB(25, 25, 112));
+
+	pDC -> SelectObject(&NewBrush1);
+	pDC->Polygon(Pt1, 4);
+	
+	
+
+
+
+	CPoint Pt2[4];
+	Pt2[0] = CPoint(958, 474);
+	Pt2[1] = CPoint(960, 463);
+	Pt2[2] = CPoint(968, 410);
+	Pt2[3] = CPoint(927, 457);
+	CBrush NewBrush2(RGB(8, 24, 168));
+
+	pDC->SelectObject(&NewBrush2);
+	pDC->Polygon(Pt2, 4);
+	
+	//boundaryFill4(950, 450, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+
+	CPoint Pt3[3];
+	Pt3[0] = CPoint(1003, 481);
+	Pt3[1] = CPoint(960, 463);
+	Pt3[2] = CPoint(969, 412);
+	//Pt[3] = CPoint(958, 474);
+	CBrush NewBrush3(RGB(8, 24, 168));
+
+	pDC->SelectObject(&NewBrush3);
+	pDC->Polygon(Pt3, 3);
+	
+	//boundaryFill4(975, 425, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+
+	CPoint Pt4[4];
+	Pt4[0] = CPoint(927, 457);
+	Pt4[1] = CPoint(880, 433);
+	Pt4[2] = CPoint(917, 366);
+	Pt4[3] = CPoint(967, 411);
+	CBrush NewBrush4(RGB(15, 82, 186));
+
+	pDC->SelectObject(&NewBrush4);
+	pDC->Polygon(Pt4, 4);
+	//COLORREF newcolor4 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor4);
+	//boundaryFill4(890, 437, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+
+	CPoint Pt5[4];
+	Pt5[0] = CPoint(917, 366);
+	Pt5[1] = CPoint(960, 311);
+	Pt5[2] = CPoint(1046, 395);
+	Pt5[3] = CPoint(969, 412);
+	CBrush NewBrush5(RGB(70, 130, 180));
+
+	pDC->SelectObject(&NewBrush5);
+	pDC->Polygon(Pt5, 4);
+	//COLORREF newcolor5 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor5);
+	//boundaryFill4(1000, 350, RGB(0, 0, 255), RGB(0, 0, 0), pDC);///
+
+
+
+	CPoint Pt6[3];
+
+	Pt6[0] = CPoint(917, 366);
+	Pt6[1] = CPoint(916, 300);
+	Pt6[2] = CPoint(953, 323);
+	//Pt6[3] = CPoint(958, 474);
+	CBrush NewBrush6(RGB(70, 130, 180));
+
+	pDC->SelectObject(&NewBrush6);
+	pDC->Polygon(Pt6, 3);
+	//COLORREF newcolor6 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor6);
+	//boundaryFill4(920, 327, RGB(0, 0, 255), RGB(0, 0, 0), pDC);///
+
+
+	CPoint Pt7[3];
+	Pt7[0] = CPoint(960, 311);
+	Pt7[1] = CPoint(1104, 324);
+	Pt7[2] = CPoint(1046, 395);
+	//Pt7[3] = CPoint(958, 474);
+	CBrush NewBrush61(RGB(70, 130, 180));
+
+	pDC->SelectObject(&NewBrush61);
+	pDC->Polygon(Pt7, 3);
+	//COLORREF newcolor7 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor7);
+	//boundaryFill4(1000, 347, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+
+	CPoint Pt8[4];
+	Pt8[0] = CPoint(953, 323);
+	Pt8[1] = CPoint(916, 300);
+	Pt8[2] = CPoint(1062, 314);///
+	Pt8[3] = CPoint(1054, 319);///
+	CBrush NewBrush7(RGB(125, 249, 255));
+
+	pDC->SelectObject(&NewBrush7);
+	pDC->Polygon(Pt8, 4);
+	//COLORREF newcolor8 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor8);
+	//boundaryFill4(1000, 318, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+
+	CPoint Pt9[3];
+	Pt9[0] = CPoint(880, 433);
+	Pt9[1] = CPoint(842, 355);
+	Pt9[2] = CPoint(916, 365);
+	//Pt[3] = CPoint(958, 474);
+	CBrush NewBrush8(RGB(70, 130, 180));
+
+	pDC->SelectObject(&NewBrush8);
+	pDC->Polygon(Pt9, 3);
+	//COLORREF newcolor9 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor9);
+	//boundaryFill4(860, 360, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+
+	CPoint Pt10[4];
+	Pt10[0] = CPoint(842, 355);
+	Pt10[1] = CPoint(834, 343);
+	Pt10[2] = CPoint(864, 333);
+	Pt10[3] = CPoint(917, 366);
+	CBrush NewBrush9(RGB(167, 199, 231));
+
+	pDC->SelectObject(&NewBrush9);
+	pDC->Polygon(Pt10, 4);
+	//COLORREF newcolor10 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor10);
+	//boundaryFill4(850, 350, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+
+	CPoint Pt11[3];
+	Pt11[0] = CPoint(834, 343);
+	Pt11[1] = CPoint(829, 354);
+	Pt11[2] = CPoint(839, 350);
+	//Pt[3] = CPoint(958, 474);
+	CBrush NewBrush10(RGB(182, 208, 226));
+
+	pDC->SelectObject(&NewBrush10);
+	pDC->Polygon(Pt11, 3);
+	//COLORREF newcolor11 = RGB(0, 0, 255);
+	//pDC->SetPixel(100, 200, newcolor11);
+	//boundaryFill4(838, 347, RGB(0, 0, 255), RGB(0, 0, 0), pDC);
+
+
+	// TODO: add draw code for native data here
+}
+
+
+// CMFCApplication1View printing
+
+
+void CMFCApplication1View::OnFilePrintPreview()
+{
+#ifndef SHARED_HANDLERS
+	AFXPrintPreview(this);
+#endif
+}
+
+BOOL CMFCApplication1View::OnPreparePrinting(CPrintInfo* pInfo)
+{
+	// default preparation
+	return DoPreparePrinting(pInfo);
+}
+
+void CMFCApplication1View::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
+{
+	// TODO: add extra initialization before printing
+}
+
+void CMFCApplication1View::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
+{
+	// TODO: add cleanup after printing
+}
+
+void CMFCApplication1View::OnRButtonUp(UINT /* nFlags */, CPoint point)
+{
+	ClientToScreen(&point);
+	OnContextMenu(this, point);
+}
+
+void CMFCApplication1View::OnContextMenu(CWnd* /* pWnd */, CPoint point)
+{
+#ifndef SHARED_HANDLERS
+	theApp.GetContextMenuManager()->ShowPopupMenu(IDR_POPUP_EDIT, point.x, point.y, this, TRUE);
+#endif
+}
+
+
+// CMFCApplication1View diagnostics
+
+#ifdef _DEBUG
+void CMFCApplication1View::AssertValid() const
+{
+	CView::AssertValid();
+}
+
+void CMFCApplication1View::Dump(CDumpContext& dc) const
+{
+	CView::Dump(dc);
+}
+
+CMFCApplication1Doc* CMFCApplication1View::GetDocument() const // non-debug version is inline
+{
+	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CMFCApplication1Doc)));
+	return (CMFCApplication1Doc*)m_pDocument;
+}
+#endif //_DEBUG
+
+
+// CMFCApplication1View message handlers
 
